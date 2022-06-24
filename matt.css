@@ -1,0 +1,83 @@
+body {
+  background-color: rgba(180, 228, 238, 0.932);
+}
+
+div.header {
+  position:relative;
+  display:inline-block;
+  width:100%;
+  min-height:10%;
+  overflow:hidden;
+  background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url("images/hex_cropped.png");
+  background-size:cover;
+  }
+  div.directory {
+    min-height:10%;
+    overflow:hidden;
+    }
+h1 {
+  color: rgb(26, 0, 0);
+    margin-left: 100px;
+}
+
+h2 {
+  color: rgb(46, 6, 6);
+  margin-left: 100px;
+}
+h3 {
+  color: rgb(46, 6, 6);
+  margin-left: 100px;
+}
+
+table {
+  border: 3px solid salmon;
+  border-style: ridge;
+  border-block-start-color: aquamarine;
+  border-block-end-color: blueviolet;
+  background-color: goldenrod;
+
+}
+th, td {
+  border: 3px solid salmon;
+  border-style: ridge;
+  border-block-start-color: aquamarine;
+  border-block-end-color: blueviolet;
+  background-color: goldenrod;
+  padding-top: 2px;
+  padding-bottom: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-block-start-color: aquamarine;
+  border-block-end-color: blueviolet;
+  background-color: goldenrod;
+}
+
+table.heading {
+  width:100%;
+  border-color: transparent salmon;
+  border-style: solid;
+  border: 0px transparent;
+  border-block-start-color: transparent salmon;
+  border-block-end-color: transparent salmon;
+  background-color: transparent salmon;
+}
+td.heading{
+  border: 3px solid transparent;
+  background-color: transparent;
+  width:90%;
+  border-block-start-color: transparent;
+  border-block-end-color: transparent;
+  background-color: transparent;
+}
+td.directory{
+  border: 3px solid transparent;
+  background-color: transparent;
+  width:10%;
+  border-block-start-color: transparent;
+  border-block-end-color: transparent;
+  background-color: transparent;
+}
+tr {
+  height:40px;
+  font-size: 16pt;
+}

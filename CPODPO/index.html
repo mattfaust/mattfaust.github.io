@@ -1,8 +1,235 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-  <head>
-    <title>Title</title>
-  </head>
-  <body>
-    <h1>Test</h1>
-  </body>
-</html>
+<head>
+  <title>Generic properties of dispersion relations for discrete periodic operators</title>
+  <link rel="shortcut icon" href="../../images/sottile.ico"> 
+  <link href="../../images/frank.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#ffffff">
+ <table>
+  <tr valign=top>
+   <td rowspan=2>
+    <a href="dispersion_movie.gif"><img src="dispersion_small.png"></a> &nbsp; 
+   </td>
+   <td>
+     <h1>Generic properties of dispersion relations for discrete periodic operators</h1>
+       <font size="+2">
+     <A HREF="https://math.arizona.edu/~dothanhngocctsp/">Ngoc Thanh Do</A>,
+     <a href="/~peter.kuchment/">Peter Kuchment</a>, and 
+     <a href="/~sottile/index.html">Frank Sottile</a>.
+    </font>
+   </td>
+ </tr>
+  <tr><td><font size=+1>This page accompanies the article
+   <a href="../../pdf/DKS.pdf">Generic properties of dispersion relations for discrete periodic operators</a>,<br>
+   providing software and additional information on the computations that underlie the
+    proof of the main theorem.</font></td>
+ </tr>
+
+ </table>
+<!------------------------------------------------------------------------->
+<hr>
+<!------------------------------------------------------------------------->
+<table>
+  <tr>
+    <td>
+      <img height=360pt src="FundamentalDomain.png">
+    </td><td>&nbsp;</td>
+    <td width=930pt>
+      <font size=+1> &nbsp;  &nbsp; 
+      This paper addresses a conjecture about the behaviour of the dispersion relation of
+      a periodic Schr&ouml;dinger operator -&Delta; + <i>V</i>(<i>x</i>), near the edges
+      of its spectrum.  Roughly, the spectrum should behave like a generic family of self-adjoint matrices.<br><br>
+    &nbsp;  &nbsp; 
+      This is an analytic question, but it becomes algebraic when discretized.
+      We address a discrete version concerning a Laplace-Beltrami type operator
+      on the <b>Z</b><sup>2</sup>-periodic
+      graph shown in a neighborhood of a fundamental domain at left. 
+      Let <i>f</i> be a function on the vertices where
+      <i>f</i>(<i>x</i>+<i>a</i><b>e</b><sub>1</sub>+<i>b</i><b>e</b><sub>2</sub>)=
+      <i>z</i><sub>1</sub><sup><i>a</i></sup><i>z</i><sub>2</sub><sup><i>b</i></sup> <i>f</i>(<i>x</i>),
+      where <i>a</i>, <i>b</i> are integers and
+      (<i>z</i><sub>1</sub>, <i>z</i><sub>2</sub>) &epsilon; <b>T</b><sup>2</sup> are unit complex numbers,
+      and <b>e</b><sub>1</sub>, <b>e</b><sub>2</sub> are the standard basis vectors of <b>R</b><sup>2</sup>.
+      Thus <i>f</i> is determined by its values at the vertices <i>C</i> and <i>D</i>.
+      Let  &alpha;=(&alpha;<sub>1</sub>,...,&alpha;<sub>9</sub>) be positive real edge weights
+      and let <i>L</i><sub>&alpha;</sub>(<i>z</i>) be the finite difference operator defined by<br><br>
+      <center>
+      <i>L</i><sub>&alpha;</sub>(<i>z</i>) <i>f</i>(<i>u</i>)  &nbsp; = &nbsp;
+      <font size=+2>&Sigma;</font><sub><i>e</i>=(<i>u</i>,<i>v</i>)</sub> &alpha;<sub><i>e</i></sub>
+       ( <i>f</i>(<i>u</i>) &nbsp;-&nbsp; <i>f</i>(<i>v</i>) ) ,<br><br>
+      </center>
+      the sum over edges <i>e</i>=(<i>u</i>,<i>v</i>) incident on <i>u</i>.<br><br>
+    &nbsp;  &nbsp; 
+      This operator <i>L</i><sub>&alpha;</sub>(<i>z</i>) is a family
+      (over the parameters &alpha; &epsilon; <b>R</b><sup>9</sup> and <i>z</i> &epsilon; <b>T</b><sup>2</sup>)
+      of self-adjoint 2&times;2 matrices, so it typically has two real eigenvalues
+      &lambda;<sub>1</sub>&leq;&lambda;<sub>2</sub>, which we consider to be functions of <i>z</i>, called <i>band
+      functions</i>.
+       The picture above at left shows the band functions for
+       <i>L</i><sub>(1,2,3,4,5,6,7,8,1)</sub>(<i>z</i>), where <b>T</b><sup>2</sup> is the square at the bottom.
+      </font>
+   </td>
+  </tr>
+  <tr>
+    <td colspan=3 width=1290pt><font size=+1>
+      <b>Theorem</b>: The set of &alpha; &epsilon; <b>R</b><sup>9</sup> for which the band functions
+      &lambda;<sub><i>i</i></sub>(<i>z</i>) have nondegenerate extrema contains a non-empty Zariski open subset.
+      </font>
+   </td>
+  </tr>
+  <tr>
+    <td colspan=3 width=1290pt>  <font size=+1>  &nbsp;  &nbsp; 
+      The band functions (dispersion relation) are defined implicitly by the characteristic equation for the eigenvalues of
+      the matrix  <i>L</i><sub>&alpha;</sub>(<i>z</i>).
+      Critical points of the band functions are given by implicit derivatives of this characteristic equation, and the
+      condition that a critical point is nondegenerate is the non-vanishing of a Hessian determinant.<br><br>
+      &nbsp;  &nbsp;
+      The entries of the matrix  <i>L</i><sub>&alpha;</sub>(<i>z</i>) are linear in the weights &alpha; and
+      Laurent monomials in <i>z</i>.
+      As shown in <a href="../../pdf/DKS.pdf">our paper</a>, these conditions for degenerate critical points of the band
+      functions are homogeneous polynomials in &alpha; and &lambda;, and Laurent polymnomials in <i>z</i>.
+      Consequently, they define a complex algebraic subscheme <i>V</i> of
+      <b>C</b><sup>10</sup>&times;(<b>C</b><sup>&times;</sup>)<sup>2</sup>.
+      The set of real parameters &alpha; for which <i>L</i><sub>&alpha;</sub>(<i>z</i>) has degenerate extrema is a subset
+      of the real points of the projection of <i>V</i> to <b>C</b><sup>9</sup><sub>&alpha;</sub>.<br><br>
+      &nbsp;  &nbsp;
+      Here, we document several computations that give proofs of the <b>Theorem</b>, as well as investigate some further
+      questions. 
+
+      </font>
+    </td>
+  </tr>
+</table>
+<!------------------------------------------------------------------------->
+ <hr>
+<!------------------------------------------------------------------------->
+<!------------------------------------------------------------------------->
+<table>
+  <tr>
+    <td width=1290pt>
+    <!------------------------------------>
+      Let us first recall the matrix <i>A</i>(&alpha;<sub>1</sub>,...&alpha;<sub>9</sub>,<i>z</i><sub>1</sub>,<i>z</i><sub>2</sub>) =
+<i>A</i>:=(<i>a<sub>ij</sub></i>), for <i>i</i>,<i>j</i>=1,2.
+<table>
+ <!------------------------------------>
+ <tr>
+  <td> &nbsp;  &nbsp;  </td><td> <i>a</i><sub>11</sub> </td> <td> = </td>
+  <td>  &alpha;<sub>2</sub> + &alpha;<sub>3</sub> + &alpha;<sub>5</sub> + &alpha;<sub>6</sub> + &alpha;<sub>9</sub>
+    + 2&alpha;<sub>1</sub>   + 2&alpha;<sub>4</sub>  - &alpha;<sub>1</sub>( <i>z</i><sub>1</sub> + <i>z</i><sub>1</sub><sup>-1</sup> )
+    - &alpha;<sub>4</sub>( <i>z</i><sub>2</sub> + <i>z</i><sub>2</sub><sup>-1</sup> ) </td>
+ </tr>
+ <!------------------------------------>
+ <tr>
+  <td> &nbsp;  &nbsp;  </td><td> <i>a</i><sub>12</sub> </td> <td> = </td>
+  <td> -( &alpha;<sub>2</sub><i>z</i><sub>2</sub> + &alpha;<sub>3</sub><i>z</i><sub>1</sub>
+         + &alpha;<sub>6</sub><i>z</i><sub>2</sub><sup>-1</sup> + &alpha;<sub>9</sub><i>z</i><sub>1</sub><sup>-1</sup>  + &alpha;<sub>5</sub> )  </td>
+ </tr>
+ <!------------------------------------>
+ <tr>
+  <td> &nbsp;  &nbsp;  </td><td> <i>a</i><sub>21</sub> </td> <td> = </td>
+  <td> -( &alpha;<sub>2</sub><i>z</i><sub>2</sub><sup>-1</sup>+ &alpha;<sub>3</sub><i>z</i><sub>1</sub><sup>-1</sup>
+         + &alpha;<sub>6</sub><i>z</i><sub>2</sub> + &alpha;<sub>9</sub><i>z</i><sub>1</sub>  + &alpha;<sub>5</sub> ) </td>
+ </tr>
+ <!------------------------------------>
+ <tr>
+  <td> &nbsp;  &nbsp;  </td><td> <i>a</i><sub>22</sub> </td> <td> = </td>
+  <td>   &alpha;<sub>2</sub> + &alpha;<sub>3</sub> + &alpha;<sub>5</sub> + &alpha;<sub>6</sub> + &alpha;<sub>9</sub>
+    + 2&alpha;<sub>7</sub>   + 2&alpha;<sub>8</sub>  - &alpha;<sub>7</sub>( <i>z</i><sub>2</sub> + <i>z</i><sub>2</sub><sup>-1</sup> )
+    - &alpha;<sub>8</sub>( <i>z</i><sub>1</sub> + <i>z</i><sub>1</sub><sup>-1</sup> )
+     </td>
+ </tr>
+ <!------------------------------------>
+</table>
+<!------------------------------------------------------------------>
+</td></tr>
+<!---------------------------------------------------------------------------->
+<tr>
+<td width=1290pt>
+<!------------------------------------>
+
+There are four equations.  The first is the characteristic equation for the eigenvalues &lambda; of the matrix
+<i>A</i>(&alpha;<sub>1</sub>,...&alpha;<sub>9</sub>,<i>z</i><sub>1</sub>,<i>z</i><sub>2</sub>).
+Then there are two implicit equations for &part;&lambda;/&part;<i>z<sub>i</sub></i> for <i>i</i>=1,2.
+The fourth equation is the Hessian determinant for the second (implicit) partial derivatives of &lambda; with respect to the <i>z<sub>i</sub></i>.
+  <br>
+  &nbsp; &nbsp; 
+    Implicit differentiation represents the implicit derivative as a rational expression of the parameters and variables.
+    Since our formulation is that these implicit derivatives vanish, we only take the numerators of the rational expressions.
+    This may introduce some extraneous solutions.
+    We used a <a href="https://www.maplesoft.com/">Maple</a> script, <a href="files/Bertini.maple">Bertini.maple</a> to generate these equations, and to write an
+    input file <a href="files/Bertini_input">Bertini_input</a> for the computation in <a href="https://bertini.nd.edu/">bertini</a>.
+    Running the file  <a href="files/Bertini.maple">Bertini.maple</a> creates the input file <a href="files/Bertini_input">Bertini_input</a>, we also have what this
+  run dumps to a VT100 terminal, in <a href="files/Bertini_output">Bertini_output</a>.<br><br>
+
+  Follow this <a href="Bertini.html">link</a> for details of the Bertini computation that establishes Theorem ???.<br>
+  <hr>
+<!------------------------------------------------------------------>
+</td></tr>
+<!---------------------------------------------------------------------------->
+<tr>
+<td width=1290pt>
+<!------------------------------------>
+  We proved Theorem ?? with a symbolic computation that showed when
+  (&alpha;<sub>1</sub>,&alpha;<sub>2</sub>,...,&alpha;<sub>8</sub>,&alpha;<sub>9</sub>)=(1,2,3,4,5,6,7,8,1),
+  all critical points are nondegenerate.
+  This computation may be done by running the <a href="https://www.maplesoft.com/">Maple</a> file <a href="files/Empty.maple">Empty.maple</a>; it generates the
+  equations and then shows that they define the idea <1>, which means there are no solutions.
+  There is a version for the computer algebra system <a href="https://www.singular.uni-kl.de/index.php">Singular</a>, it is the file
+  <a href="files/Empty.sing">Empty.sing</a>.
+  <hr>
+  We also investigated all subgraphs which consistently gave degenerate dispersion relations.
+  The file for that computation is  <a href="files/Subsets.maple">Subsets.maple</a> and its output is <a href="files/Subsets_out">Subsets_out</a>.
+  For each subset <i>S</i> of the edges, it computes 10 random instances of the equations for degenerate critical points for the graph whose edges are chosen from
+  <i>S</i>.
+  If for each of these 10 instances, it finds degenerate critical points, then it saves that subset and writes it to the standard output.
+  We captured that in the file <a href="files/Subsets_out">Subsets_out</a>.
+  There were 87 'degenerate' subgraphs.
+  We analyzed that file, finding eleven maximal 'degenerate' subgraphs, which were displayed in our paper.<br><br>
+
+  While each 'degenerate' subgraph was disconnected, not all disconnected subgraphs were 'degenerate'.
+  For that, we used <a href="files/Components.maple">Components.maple</a> to compute all disconnected subgraphs.
+  Some procedures it used are in the file <a href="files/ComponentsP.maple">ComponentsP.maple</a>, which is needed to run
+  <a href="files/Components.maple">Components.maple</a>.
+  Here is its output: <a href="files/Components_out">Components_out</a>.
+  We also wrote a short file to find the disconnected subgraphs whose dispersion relation was nondegenerate:
+  <a href="files/Compare.maple">Compare.maple</a>.
+ 
+
+<!---------------------------------------------------------------------------->
+</td></tr>
+</table>
+<!---------------------------------------------------------------------------->
+
+
+
+<br><br>
+
+<!---------------------------------------------------------------------------->
+ <hr>
+<!---------------------------------------------------------------------------->
+
+      <img src="dispersion_movie.gif">
+ 
+<!----------------------------------------------------------------------->
+<hr style="width: 100%; height: 2px;">
+<i>Work of Do and Kuchment supported by the National Science Foundation under Grant DMS-1517938.</i><br>
+<i>Work of Sottile supported by the National Science Foundation under Grant DMS-1501370.</i><br>
+<!---------------------------------------------------------------------------->
+<hr>
+
+<table width=1100>
+ <tr valign=center>
+  <td align=left width=50% valign=center>
+<!-- hhmts start -->Last modified: Sun Aug 18 17:08:52 CDT 2019 <!-- hhmts end -->
+  </td>
+  <td align=right width=50% valign=center>
+ <!--  <img src="images/fsm.png">-->
+  </td>
+ </tr>
+</table>
+
+</body> </html>
+
+

@@ -8,7 +8,7 @@ div.header {
   width:100%;
   min-height:10%;
   overflow:hidden;
-  background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url("images/hex_cropped.png");
+  background-color: rgba(1, 57, 68, 0.5);
   background-size:cover;
   }
   div.directory {
@@ -29,7 +29,7 @@ h3 {
   margin-left: 100px;
 }
 
-table {
+table.direct {
   border: 3px solid salmon;
   border-style: ridge;
   border-block-start-color: aquamarine;
@@ -37,7 +37,7 @@ table {
   background-color: goldenrod;
 
 }
-th, td {
+th.direct, td.direct {
   border: 3px solid salmon;
   border-style: ridge;
   border-block-start-color: aquamarine;

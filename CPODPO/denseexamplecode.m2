@@ -86,7 +86,7 @@ use Raz
 J0 = eliminate(J,{x_1,y_1,x_2,y_2}) -- obtain possible eigen values of the critical points
 facty = (factor J0_0)
 --We get a degree 36 polynomial with potential eigenvalues
-F = ZZ/8191[x_1,x_2,z,y_1,y_2]
+F = ZZ/10667[x_1,x_2,z,y_1,y_2]
 specmap3 = map(F, Raz, {x_1,x_2,z,y_1,y_2});
 numsols = 0;
 nums = {};

@@ -10,6 +10,31 @@ needsPackage "NumericalAlgebraicGeometry"
 --literally just map
 Specialize = (P,Q,M) -> map(P,Q,M)
 
+
+--Define pruneList
+--We want to reduce the dimension to get rid of a and b for constructing our system of newton polytope
+--first list will be a given list of unpruned vertices of equal dimension
+--second list is a given set of what indices to prune, the first corresponding to 0 and so on
+--basically just a more customizable list drop
+--could have just applied drop
+--must give p list in reverse order (I should rewrite this to reorder list in descending order regardless of input)
+
+pruneList = method(TypicalValue => List)
+pruneList (List,List) := List => (initList, pList) -> (
+    local prunedList; local listLength; local vecLength;
+    prunedList = new MutableList from initList; --we are modifying the lists of the greater list so we need a Mutable list
+    listLength = #initList;
+    vecLength = #initList_0;
+    for i from 0 to listLength-1 do (	
+	for j from 0 to #pList-1 do (
+	    prunedList#i = drop(prunedList#i,{pList_j,pList_j});
+	    );
+	);
+    
+    return new List from prunedList
+    )
+
+
 -- minkowskiSum that takes a list of polytopes and recurses 
 --appearently can just use fold(minkowskiSum, List) aswell.
 myMinkowskiSum = method(TypicalValue => Thing)

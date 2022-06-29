@@ -87,12 +87,12 @@ M = coker gK;
 codim M
 dim M
 degree M
---for this example, the dimension is 0 and the degree is 140, as expected.
+--for this example, the dimension is 0 and the degree is 162, as expected.
 
 
 --next we want to check and make sure all these solutions are isolated.
 use Raz
-F = ZZ/9013[x_1,x_2,z,y_1,y_2]
+F = ZZ/6991[x_1,x_2,z,y_1,y_2]
 specmap3 = map(F, Raz, {x_1,x_2,z,y_1,y_2});
 J0 = eliminate(specmap3 J,{x_1,y_1,x_2,y_2}) -- obtain possible eigen values of the critical points
 facty = (factor J0_0)
@@ -106,7 +106,7 @@ for i from 0 to #facty-1 do (
 numsols
 nums
 --notice numsols counts 12 eigenvalues with a single critcal point, we are then left several factors that have twice as many critical points as eigen values. 
--- We expect 128 more solutions, we will look for them in a finite field, this particular prime was chosen as it yields a convient factorization (found using commented out code below)
+-- We expect 150 more solutions, we will look for them in a finite field, this particular prime was chosen as it yields a convient factorization (found using commented out code below)
 --We check this remaining polynomial of eigenvalues to find the remaining distinct solutions
 
 factss = facty;
@@ -128,14 +128,14 @@ for i from 0 to #factss-1 do (
 	    );
 pdegs
 degys
-sum degys --we see that we expect 140 solutions total, however we need to check to make sure that these 140 solutions correspond to distinct points
+sum degys --we see that we expect 162 solutions total, however we need to check to make sure that these 140 solutions correspond to distinct points
 --to do this we will again look at the ideal at each set of eigenvalues specified by each irreducible factor found
 -- we then will eliminate the remaining variables to see how many unique x_1 values exist
 
 --the degree of these fermi varities (or finite union of fermi varties are given by the list
---{1, 1, 1, 1, 1, 1, 1, 2, 2, 3, 8, 14, 16, 28, 30, 30}
+--{1, 1, 1, 2, 1, 2, 2, 1, 1, 2, 3, 3, 8, 8, 14, 20, 30, 30, 32}
 --degree of the polynomials are 
--- {1, 1, 1, 1, 1, 1, 1, 1, 2, 3, 4, 7, 8, 14, 15, 15}, we see either there are twice as many solutions as eigenvalues
+-- {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 4, 4, 7, 10, 15, 15, 16}, we see either there are twice as many solutions as eigenvalues
 -- or there are exactly as many eigen values as solutions
 --We need only check when there are more solutions than the degree of the polynomial to make sure none are the same solution
 --if we find as many x_1 values as the degree of the varity for that particular irreducible polynomial (i.e finite subset of eigenvalues)
@@ -159,11 +159,11 @@ for i from 0 to #factss-1 do (
     );
 numsols
 sols
---sols = {1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 10, 12, 12, 12, 16, 18, 22, 22}
---We see that there are 2 solutions for each eigenvalue that we needed, thus we can conclude that we counted
---Although solutions doesn't sum to 140 this is fine, as we only needed for certain eigen values this is the case
--- notice at some indices the number of x_1 is 1, but the degree of the variety is 2
--- If you look this is because this value corresponds to multiple eigen values (inparticular 2 z share the same x_1 for two irreducibles).
+--sols = {1, 1, 1, 2, 1, 2, 2, 1, 1, 2, 1, 1, 8, 8, 14, 20, 30, 30, 32}
+--We see that there are 2 solutions for each eigenvalue that we needed, thus we can conclude that we counted  all
+--Although solutions doesn't sum to 162 this is fine, as we only needed for certain eigen values this is the case
+-- notice at some indices the number of x_1 is 1, but the degree of the variety is 3
+-- If you look this is because this value corresponds to multiple eigen values (inparticular 3 z share the same x_1 for two irreducibles).
 --
 --Indeed we can compare this to checking for degenerate critical points directly by adding the hessian to our set of critical point equations
 use Raz

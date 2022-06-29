@@ -148,11 +148,11 @@ degree echek
 
 numsols = 0;
 sols = {}
-for i from 0 to #factss-1 do (
- chek = specmap3 J + ideal(factss#i#0);
- echek = eliminate(chek,{z});
- echek = eliminate(echek,{x_1,y_1,y_2});
- degee = degree echek;
+for i from 0 to #factss-1 do ( --warning this computation is long
+ chek = specmap3 J + ideal(factss#i#0);--you can make it faster 
+ echek = eliminate(chek,{z});--by finding a prime that results in a 
+ echek = eliminate(echek,{x_1,y_1,y_2});--factorization of terms with lower degree irreducibles
+ degee = degree echek; --36527 is best I have found so far
  numsols = numsols + degee;
  sols = append(sols, degee); 
  print i;   
@@ -161,9 +161,9 @@ numsols
 sols
 --sols = {1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 8, 14, 16, 28, 30, 30}
 --We see that there are 2 solutions for each eigenvalue that we needed, thus we can conclude that we counted
---Although solutions doesn't sum to 140 this is fine, as we only needed for certain eigen values this is the case
+--Although solutions don't sum to 140 this is fine, as we only needed for certain eigen values this is the case
 -- notice at some indices the number of x_1 is 1, but the degree of the variety is 2 or 3
--- If you look this is because this value corresponds to multiple eigen values (inparticular 2 z share the same x_1 for two irreducibles).
+-- If you look this is because this value corresponds to multiple eigen values (inparticular some z share the same x_1 for z occuring the same irreducibles).
 --
 --Indeed we can compare this to checking for degenerate critical points directly by adding the hessian to our set of critical point equations
 use Raz

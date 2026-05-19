@@ -7,51 +7,25 @@
     <meta name="google-site-verification" content="C7zyQfmf02OfzLN8bq5qaGmCqR5JJzYAKoHfJlsuRWo" />
   </head>
   <body>
-        <div class="header">
-    <table class="heading"; style="background-color: transparent; border-color: transparent;">
-      <tr><td class="heading">
-        <h1>Matthew Faust</h1>
-        <h2>Michigan State University</h2>  
-        <h2>mfaust@msu.edu</h2>  
-      </td>
-      <td class="directory">
-        <table class="direct">
-          <tr class="direct"><th class="direct">Directory</th></tr>
-          <tr>
-            <td class="direct" style="background-color:rgba(180, 228, 238, 0.932);">
-                <a href="./index.html">Home</a> 
-            </td></tr>
-          <tr>
-          <td class="direct" style="background-color:blueviolet;">
-              <a href="./research/index.html">Research</a> 
-          </td></tr>
-          <tr>
-            <td class="direct" style="background-color:rgb(60, 133, 0);">
-             <a href="./teaching/index.html"> Teaching</a>
-          </td></tr>
-          </table>
-      </td>
-    </table>
-    </div>
+        <script src="./directory.js" data-root="."></script>
 
-      <img SRC="images/matt.jpg" style="object-fit:contain; width:200px; height:auto; margin-left:10%; border: solid 1px #CCC"/><br>
-       <p style="margin-left: 10%">Photo Credit: Jordy Lopez</p> 
+      <img SRC="images/matt.jpg" title="Photo Credit: Jordy Lopez" style="object-fit:contain; width:200px; height:auto; margin-left:10%; border: solid 1px #CCC"/><br>
 
        <h2>About:</h2>
         <p style="margin-left: 8%"> I am a Research Associate (postdoc) at Michigan State University working with <a href="https://users.math.msu.edu/users/ikachkov">Ilya Kachkovskiy</a>.
         </p>
         <p style="margin-left: 8%"> I recieved my PhD from the mathematics department at Texas A&M. There, I was advised by <a href="https://sites.google.com/view/wencail/home">Wencai Liu</a> and <a href="https://franksottile.github.io/">Frank Sottile</a>. 
         </p>
-        <h2> <a href="./pdfs/CV.pdf">CV</a> <br> </h2>
+           <p style="margin-left: 8%"> In the fall, I will be a Research fellow at the Simons Institute as part of the program on <a href="https://simons.berkeley.edu/programs/spectral-theory-beyond-graphs">Spectral Theory Beyond Graphs</a>.
+        </p>
 
         <br><br>
         <hr>
         <table width=1100>
             <tr valign=center>
              <td align=left width=50% valign=center>
-                 <script>
-                     document.write("<i> Last Modified:" + " " +document.lastModified + "</i>");
-                 </script>
+                 <i data-last-modified>Last Modified: </i>
+                 <script src="last-modified.js"></script>
              </td>
              <td align=right width=50% valign=center>
             <!--  <img src="images/fsm.png">-->

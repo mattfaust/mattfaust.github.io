@@ -5,32 +5,7 @@
     <link rel="stylesheet" href="../matt.css"> 
   </head>
   <body>
-      <div class="header">
-          <table class="heading"; style="background-color: transparent; border-color: transparent;">
-            <tr><td class="heading">
-              <h1>Matthew Faust</h1>
-              <h2>Michigan State University</h2>  
-              <h2>mfaust@msu.edu</h2>  
-            </td>
-            <td class="directory">
-              <table class="direct">
-                <tr class="direct"><th class="direct">Directory</th></tr>
-                <tr>
-                  <td class="direct" style="background-color:rgba(180, 228, 238, 0.932);">
-                      <a href="../index.html">Home</a> 
-                  </td></tr>
-                <tr>
-                <td class="direct" style="background-color:blueviolet;">
-                    <a href="../research/index.html">Research</a> 
-                </td></tr>
-                <tr>
-                  <td class="direct" style="background-color:rgb(60, 133, 0);">
-                   <a href="../teaching/index.html"> Teaching</a>
-                </td></tr>
-                </table>
-            </td>
-          </table>
-          </div>
+      <script src="../directory.js" data-root=".."></script>
     <h1>
       Teaching
     </h1>
@@ -45,9 +20,8 @@
     <table width=1100>
         <tr valign=center>
          <td align=left width=50% valign=center>
-             <script>
-                 document.write("<i> Last Modified:" + " " +document.lastModified + "</i>");
-             </script>
+             <i data-last-modified>Last Modified: </i>
+             <script src="../last-modified.js"></script>
          </td>
          <td align=right width=50% valign=center>
         <!--  <img src="images/fsm.png">-->

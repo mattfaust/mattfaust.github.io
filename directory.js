@@ -34,13 +34,6 @@
               </td>
             </tr>
           </table>
-          <div style="font-size: 80%; text-align: center; margin-top: 4px; position: relative; left: -14px;">
-            <a href="https://scholar.google.com/citations?hl=en&user=zM4clkgAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
-            
-            <a href="https://mathscinet.ams.org/mathscinet/MRAuthorID/1375827" target="_blank" rel="noopener">MathSciNet</a>
-            
-            <a href="https://zbmath.org/authors/?q=Matthew%20Faust" target="_blank" rel="noopener">zbMATH</a>
-          </div>
         </td></tr>
       </table>
     </div>
